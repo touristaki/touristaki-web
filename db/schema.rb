@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(version: 2021_11_06_194117) do
     t.string "embed"
     t.bigint "partner_id", null: false
     t.text "description"
+    t.integer "status", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_tours_on_category_id"

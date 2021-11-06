@@ -7,6 +7,7 @@ class CreateTours < ActiveRecord::Migration[6.0]
       t.string :embed
       t.references :partner, null: false, foreign_key: true
       t.text :description
+      t.integer :status, default: 1
 
       t.timestamps
     end
