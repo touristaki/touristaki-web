@@ -1,4 +1,5 @@
-class Partner::ApplicationController < ActionController::Base
+class Partners::ApplicationController < ActionController::Base
   before_action :authenticate_partner!
-  layout 'partner'
+
+  layout 'partners'
 end
