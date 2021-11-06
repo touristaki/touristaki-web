@@ -1,1 +1,29 @@
 <h1>Criar um novo Roteiro</h1>
+
+<%= simple_form_for [:partners, @tour] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :title,
+                autofocus: true,
+                input_html: { autocomplete: "title" }%>
+    <%= f.input :date, 
+                as: :date, 
+                html5: true %>
+
+    <%= f.input :embed %>
+
+    <%= f.file_field :apresentation %>
+    <%= f.file_field :video_apresentation %>
+    <br>
+    <br>
+    <%= f.text_field :description  %>
+    <br>
+    <br>
+    <%= f.input :category_id, collection: Category.all, prompt: "Select your age", selected: 21 %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Criar" %>
+  </div>
+<% end %>
