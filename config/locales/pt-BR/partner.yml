@@ -34,6 +34,10 @@ pt-BR:
       index:
         painel_partner: Painel do Parceiro
         sign_out: Sair
+        profile: Minha Conta
+        create_tour: Criar Roteiro
+        my_tours: Meus Roteiros
+        favorites: Favoritos
     confirmations:
       new:
         resend_instructions: Reenviar instruções de confirmação
