@@ -1,4 +1,4 @@
-<h1>Criar um novo Roteiro</h1>
+<h1><%= t('.create_tour') %></h1>
 
 <%= simple_form_for [:partners, @tour] do |f| %>
   <%= f.error_notification %>
@@ -15,11 +15,8 @@
 
     <%= f.file_field :apresentation %>
     <%= f.file_field :video_apresentation %>
-    <br>
-    <br>
+    <%= f.label :description %>
     <%= f.text_field :description  %>
-    <br>
-    <br>
     <%= f.input :category_id, collection: Category.all, prompt: "Select your age", selected: 21 %>
   </div>
 

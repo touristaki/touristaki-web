@@ -30,6 +30,11 @@ pt-BR:
         sign_up: Cadastrar Parceiro
         sign_out: Sair
         painel_partner: Painel
+    tours:
+      index:
+        tours: Roteiros
+      new:
+        create_tour: Criar Roteiro
     dashboard:
       index:
         painel_partner: Painel do Parceiro
