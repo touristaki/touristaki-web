@@ -29,6 +29,11 @@ pt-BR:
         sign_in: Entrar
         sign_up: Cadastrar Parceiro
         sign_out: Sair
+        painel_partner: Painel
+    dashboard:
+      index:
+        painel_partner: Painel do Parceiro
+        sign_out: Sair
     confirmations:
       new:
         resend_instructions: Reenviar instruções de confirmação

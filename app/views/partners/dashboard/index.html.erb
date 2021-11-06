@@ -1,4 +1,4 @@
-<h1> Painel do Usuário </h1>
+<h1><%= t('.painel_partner') %></h1>
 
 <% if partner_signed_in? %>
 	<div><%= button_to t('.sign_out'), destroy_partner_session_path, :method => :delete %></div>
