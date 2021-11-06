@@ -1,0 +1,9 @@
+<h1> Área do Parceiro </h1>
+
+<% if partner_signed_in? %>
+  <div><%= button_to t('.painel_partner'), partners_dashboard_path, :method => :get %></div>
+	<div><%= button_to t('.sign_out'), destroy_partner_session_path, :method => :delete %></div>
+<% else %>
+	<div><%= button_to t('.sign_in'),  new_partner_session_path, :method => :get %></div>
+	<div><%= button_to t('.sign_up'),  new_partner_registration_path, :method => :get %></div>
+<% end %>
