@@ -1,0 +1,7 @@
+<h1><%= t('.road_maps')%></h1>
+
+<ul>
+  <% @tours.each do |tour| %>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> </li>
+  <% end %>
+</ul>
