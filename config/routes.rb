@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     resources :favorites, only: [:index]
     resources :profile, only: [:index]
     resources :road_maps, only: [:index, :new, :create, :show]
-    resources :tours, only: [:index, :new, :create, :show]
+    resources :tours, only: [:index, :new, :create, :show, :destroy]
     resources :favorites, only: [:index]
   end
   

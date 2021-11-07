@@ -23,6 +23,13 @@ class Partners::ToursController < ApplicationController
     end
   end
 
+  def destroy
+    @tour = Tour.find(params[:id])
+    @tour.destroy
+
+    redirect_to partners_tours_path
+  end
+
   private
 
   def load_params

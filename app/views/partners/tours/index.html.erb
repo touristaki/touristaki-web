@@ -2,6 +2,7 @@
 
 <ul>
   <% @tours.each do |tour| %>
-    <li><%= link_to tour.name, partners_tour_path(tour) %> </li>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> <%= button_to 'Remover', partners_tour_path(tour),method: :delete %></li>
+    <br>
   <% end %>
 </ul>
