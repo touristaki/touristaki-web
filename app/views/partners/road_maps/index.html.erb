@@ -1,0 +1,7 @@
+<h1><%= t('.road_maps')%></h1>
+
+<ul>
+  <% @road_maps.each do |road_map| %>
+    <li><%= link_to road_map.title, partners_road_map_path(road_map) %> </li>
+  <% end %>
+</ul>

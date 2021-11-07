@@ -30,13 +30,18 @@ pt-BR:
         sign_up: Cadastrar Parceiro
         sign_out: Sair
         painel_partner: Painel
+    road_maps:
+      index:
+        road_maps: Roteiros
+      new:
+        create_road_map: Criar Roteiro
     dashboard:
       index:
         painel_partner: Painel do Parceiro
         sign_out: Sair
         profile: Minha Conta
-        create_tour: Criar Roteiro
-        my_tours: Meus Roteiros
+        create_road_map: Criar Roteiro
+        my_road_maps: Meus Roteiros
         favorites: Favoritos
     confirmations:
       new:

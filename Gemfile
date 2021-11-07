@@ -9,6 +9,7 @@ gem 'sass-rails', '>= 6'
 gem 'jbuilder', '~> 2.7'
 gem 'devise'
 gem 'bootsnap', '>= 1.4.2', require: false
+gem "image_processing", ">= 1.2"
 
 gem 'simple_form'
 

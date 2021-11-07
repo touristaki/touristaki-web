@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  category: one
+  date: 2021-11-06 15:40:15
+  embed: MyString
+  partner: one
+
+two:
+  title: MyString
+  category: two
+  date: 2021-11-06 15:40:15
+  embed: MyString
+  partner: two

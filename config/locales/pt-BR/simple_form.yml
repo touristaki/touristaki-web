@@ -16,3 +16,10 @@ pt-BR:
           name: 'Nome'
           password: 'Senha'
           password_confirmation: 'Confirmação de Senha'
+      tour:
+        new:
+          title: 'Título'
+          date: 'Data da Live'
+          embed: 'Link da Live'
+          description: 'Descreva seu roteiro'
+          category_id: 'Categoria'
