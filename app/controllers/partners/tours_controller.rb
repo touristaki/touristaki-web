@@ -30,6 +30,18 @@ class Partners::ToursController < ApplicationController
     redirect_to partners_tours_path
   end
 
+  def edit
+    @tour = Tour.find(params[:id])
+  end
+
+  def update
+    @tour = Tour.find(params[:id])
+
+    if @tour.update(*load_params)
+      redirect_to partners_tour_path(@tour)
+    end
+  end
+
   private
 
   def load_params
