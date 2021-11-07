@@ -5,5 +5,5 @@ class RoadMap < ApplicationRecord
   has_one_attached  :presentation_video
   has_many_attached :presentation_photo
 
-  # enum status: { pending: 1, processing: 10, closed: 20, accomplished: 30 }
+  has_many :tours
 end
