@@ -1,4 +1,4 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
   devise_for :partners
 
   root to: "home#index"
@@ -8,7 +8,7 @@ Rails.application.routes.draw do
     get 'dashboard#index', to: 'dashboard#index', as: 'dashboard'
     resources :favorites, only: [:index]
     resources :profile, only: [:index]
-    resources :tours, only: [:index, :new, :create, :show]
+    resources :road_maps, only: [:index, :new, :create, :show]
     resources :favorites, only: [:index]
   end
   

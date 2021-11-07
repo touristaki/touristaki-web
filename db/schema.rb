@@ -55,18 +55,15 @@ ActiveRecord::Schema.define(version: 2021_11_06_194117) do
     t.index ["reset_password_token"], name: "index_partners_on_reset_password_token", unique: true
   end
 
-  create_table "tours", force: :cascade do |t|
+  create_table "road_maps", force: :cascade do |t|
     t.string "title"
     t.bigint "category_id", null: false
-    t.datetime "date"
-    t.string "embed"
     t.bigint "partner_id", null: false
     t.text "description"
-    t.integer "status", default: 1
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["category_id"], name: "index_tours_on_category_id"
-    t.index ["partner_id"], name: "index_tours_on_partner_id"
+    t.index ["category_id"], name: "index_road_maps_on_category_id"
+    t.index ["partner_id"], name: "index_road_maps_on_partner_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -82,6 +79,6 @@ ActiveRecord::Schema.define(version: 2021_11_06_194117) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "tours", "categories"
-  add_foreign_key "tours", "partners"
+  add_foreign_key "road_maps", "categories"
+  add_foreign_key "road_maps", "partners"
 end

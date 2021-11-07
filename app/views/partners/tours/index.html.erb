@@ -1,7 +1,0 @@
-<h1><%= t('.tours')%></h1>
-
-<ul>
-  <% @tours.each do |tour| %>
-    <li><%= link_to tour.title, partners_tour_path(tour) %> </li>
-  <% end %>
-</ul>
