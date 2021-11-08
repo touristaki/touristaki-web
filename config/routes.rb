@@ -6,7 +6,6 @@ Rails.application.routes.draw do
   namespace :partners do
     root to: 'home#index'
     get 'dashboard#index', to: 'dashboard#index', as: 'dashboard'
-    resources :favorites, only: [:index]
     resources :profile, only: [:index]
     resources :road_maps, only: [:index, :new, :create, :show]
     resources :tours

@@ -1,7 +1,6 @@
 <h1><%= t('.painel_partner') %></h1>
 
 <% if partner_signed_in? %>
-	<div><%= button_to t('.favorites'), partners_favorites_path, :method => :get %></div>
 	<div><%= button_to t('.create_road_map'), new_partners_road_map_path, :method => :get %></div>
 	<div><%= button_to t('.my_road_maps'), partners_road_maps_path, :method => :get %></div>
 	<div><%= button_to t('.create_tour'), new_partners_tour_path, :method => :get %></div>
