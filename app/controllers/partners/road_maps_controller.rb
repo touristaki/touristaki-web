@@ -14,7 +14,7 @@ class Partners::RoadMapsController < ApplicationController
     @road_map = current_partner.road_maps.build(*load_params)
 
     if @road_map.save!
-      redirect_to partners_road_maps_path
+      redirect_to partners_road_map_path(@road_map)
     end
   end
 

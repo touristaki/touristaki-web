@@ -1,0 +1,20 @@
+<h1> Atualizar Tour</h1>
+
+<%= simple_form_for [:partners, @tour] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name,
+                autofocus: true,
+                input_html: { autocomplete: "title" }%>
+
+    <%= f.input :live_date, as: :date %>
+    <%= f.input :video_link %>
+    
+    <%= f.input :road_map_id, collection: RoadMap.all, prompt: "Selecionar o roteiro" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Criar" %>
+  </div>
+<% end %>

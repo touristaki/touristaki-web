@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_06_194117) do
+ActiveRecord::Schema.define(version: 2021_11_07_134412) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,6 +66,17 @@ ActiveRecord::Schema.define(version: 2021_11_06_194117) do
     t.index ["partner_id"], name: "index_road_maps_on_partner_id"
   end
 
+  create_table "tours", force: :cascade do |t|
+    t.string "name"
+    t.datetime "live_date"
+    t.integer "status", default: 1
+    t.string "video_link"
+    t.bigint "road_map_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["road_map_id"], name: "index_tours_on_road_map_id"
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -81,4 +92,5 @@ ActiveRecord::Schema.define(version: 2021_11_06_194117) do
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "road_maps", "categories"
   add_foreign_key "road_maps", "partners"
+  add_foreign_key "tours", "road_maps"
 end

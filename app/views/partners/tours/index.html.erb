@@ -1,0 +1,8 @@
+<h1><%= t('.tours')%></h1>
+
+<ul>
+  <% @tours.each do |tour| %>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> <%= button_to 'Remover', partners_tour_path(tour),method: :delete %> <%= button_to 'Atualizar', edit_partners_tour_path(tour), method: :get %></li>
+    <br>
+  <% end %>
+</ul>
