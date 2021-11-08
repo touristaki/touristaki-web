@@ -47,5 +47,4 @@ class Partners::ToursController < ApplicationController
   def load_params
     params.require(:tour).permit(:name, :road_map_id, :live_date, :video_link)
   end
-
 end
