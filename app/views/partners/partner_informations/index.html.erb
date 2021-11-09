@@ -1,0 +1,24 @@
+<h1>Meus Dados</h1>
+
+<h2>Dados Pessoais </h2>
+<div>Nome: <%= @information.full_name %> </div>
+<div>CPF: <%= @information.cpf %> </div>
+<div>CNPJ: <%= @information.cnpj %> </div>
+<div>Língua: <%= @information.language %> </div>
+
+<h2>Contato</h2>
+
+<div>Telefone: <%= @information.contact_phone %> </div>
+<div>E-mail: <%= current_partner.email %> </div>
+
+<h2>Endereço</h2>
+
+<div>CEP: <%= @information.cep %> </div>
+<div>Cidade: <%= @information.city %> </div>
+<div>Bairro: <%= @information.district %> </div>
+<div>Estado: <%= @information.state %> </div>
+<div>Endereço: <%= @information.address %> </div>
+<div>Número: <%= @information.address_number %> </div>
+
+
+<%= link_to "Deseja Editar", edit_partners_partner_information_path(@information) %>

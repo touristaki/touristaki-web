@@ -5,7 +5,7 @@
 	<div><%= button_to t('.my_road_maps'), partners_road_maps_path, :method => :get %></div>
 	<div><%= button_to t('.create_tour'), new_partners_tour_path, :method => :get %></div>
 	<div><%= button_to t('.my_tours'), partners_tours_path, :method => :get %></div>
-	<div><%= button_to t('.profile'), partners_profile_index_path, :method => :get %></div>
+	<div><%= button_to t('.profile'), partners_partner_informations_path, :method => :get %></div>
 	<div><%= button_to t('.sign_out'), destroy_partner_session_path, :method => :delete %></div>
 <% else %>
 	<div><%= button_to t('.sign_in'),  new_partner_session_path, :method => :get %></div>
