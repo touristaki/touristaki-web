@@ -18,6 +18,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   gem 'pry-byebug'
