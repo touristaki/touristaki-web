@@ -11,6 +11,7 @@ gem 'devise'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'simple_form'
+gem "administrate"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
