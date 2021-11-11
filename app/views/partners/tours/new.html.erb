@@ -11,10 +11,12 @@
     <%= f.input :live_date, as: :date %>
     <%= f.input :video_link %>
     
-    <%= f.input :road_map_id, collection: RoadMap.all, prompt: "Selecionar o roteiro" %>
+    <%= f.input :road_map_id, collection: @road_maps, prompt: "Selecionar o roteiro" %>
   </div>
 
   <div class="form-actions">
     <%= f.button :submit, "Criar" %>
   </div>
 <% end %>
+
+<%= link_to "Voltar", partners_dashboard_path %>
