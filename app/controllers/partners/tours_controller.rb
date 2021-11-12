@@ -3,7 +3,7 @@ class Partners::ToursController < ApplicationController
   before_action :load_params, only: [:create]
 
   def index
-    @tours =  Tour.where(road_map_id: current_partner.road_maps.ids )
+    @tours = Tour.where(road_map_id: current_partner.road_maps.ids )
   end
 
   def show
@@ -41,6 +41,11 @@ class Partners::ToursController < ApplicationController
     if @tour.update(*load_params)
       redirect_to partners_tour_path(@tour)
     end
+  end
+
+  def scheduled
+    @tours = Tour.where(road_map_id: current_partner.road_maps.ids)
+                 .where(status: "processing")
   end
 
   private
