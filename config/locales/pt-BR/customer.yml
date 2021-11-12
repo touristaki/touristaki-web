@@ -1,0 +1,23 @@
+pt-BR:
+  activerecord:
+    models:
+      customer:
+        one: Cliente
+        other: Clientes
+    attributes:
+      customer:
+        name: nome
+        email: E-mail
+        language: idioma
+        account_type:
+          free_customer: Cliente Free
+          pro_customer: Cliente Pro
+    customer:
+      index:
+        customers: Clientes
+      new:
+        new_customer: Novo Cliente
+      show:
+
+
+

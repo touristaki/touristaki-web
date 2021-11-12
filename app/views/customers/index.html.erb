@@ -1,0 +1,10 @@
+<h1><%= t('.customers')%></h1>
+
+<ul>
+  <% @customers.each do |customer| %>
+    <li><%= customer.name %> </li>
+    <li><%= customer.email %> </li>
+    <li><%= customer.language %> </li>
+    <li><%= customer.account_type %> </li>
+  <% end %>
+</ul>

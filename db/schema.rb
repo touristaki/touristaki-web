@@ -36,12 +36,35 @@ ActiveRecord::Schema.define(version: 2021_11_09_001316) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
+  create_table "addresses", force: :cascade do |t|
+    t.string "street"
+    t.string "city"
+    t.string "state"
+    t.string "country"
+    t.string "zip_code"
+    t.string "number"
+    t.string "complement"
+    t.bigint "customer_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["customer_id"], name: "index_addresses_on_customer_id"
+  end
+
   create_table "categories", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
+  create_table "customers", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "language"
+    t.integer "account_type"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+  
   create_table "partner_informations", force: :cascade do |t|
     t.string "full_name"
     t.string "language"
@@ -59,6 +82,7 @@ ActiveRecord::Schema.define(version: 2021_11_09_001316) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["partner_id"], name: "index_partner_informations_on_partner_id"
+
   end
 
   create_table "partners", force: :cascade do |t|
@@ -109,6 +133,7 @@ ActiveRecord::Schema.define(version: 2021_11_09_001316) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "addresses", "customers"
   add_foreign_key "partner_informations", "partners"
   add_foreign_key "road_maps", "categories"
   add_foreign_key "road_maps", "partners"
