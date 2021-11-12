@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_10_020858) do
+ActiveRecord::Schema.define(version: 2021_11_09_001316) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -64,6 +64,26 @@ ActiveRecord::Schema.define(version: 2021_11_10_020858) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
+  
+  create_table "partner_informations", force: :cascade do |t|
+    t.string "full_name"
+    t.string "language"
+    t.string "country"
+    t.string "contact_phone"
+    t.string "cpf"
+    t.string "cnpj"
+    t.string "cep"
+    t.string "city"
+    t.string "state"
+    t.string "address"
+    t.string "district"
+    t.integer "address_number"
+    t.bigint "partner_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["partner_id"], name: "index_partner_informations_on_partner_id"
+
+  end
 
   create_table "partners", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -114,6 +134,7 @@ ActiveRecord::Schema.define(version: 2021_11_10_020858) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "addresses", "customers"
+  add_foreign_key "partner_informations", "partners"
   add_foreign_key "road_maps", "categories"
   add_foreign_key "road_maps", "partners"
   add_foreign_key "tours", "road_maps"

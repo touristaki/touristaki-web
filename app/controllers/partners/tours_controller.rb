@@ -12,6 +12,7 @@ class Partners::ToursController < ApplicationController
 
   def new
     @tour = Tour.new
+    @road_maps = current_partner.road_maps
   end
 
   def create
