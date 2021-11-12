@@ -5,12 +5,18 @@ Rails.application.routes.draw do
 
   namespace :partners do
     root to: 'home#index'
+
     get 'dashboard#index', to: 'dashboard#index', as: 'dashboard'
+
     resources :partner_informations, only: [:index, :edit, :update]
     resources :road_maps, only: [:index, :new, :create, :show]
-    resources :tours
+
+    resources :tours do
+      get 'scheduled', on: :collection
+    end
+
     resources :favorites, only: [:index]
   end
-  
+
   devise_for :users
 end
