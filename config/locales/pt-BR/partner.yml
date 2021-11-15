@@ -38,7 +38,8 @@ pt-BR:
     tours:
       index:
         tours: Tours
-        scheduleds: Agendado
+        scheduleds: Agendados
+        accomplished: Realizados
         remove: Remover
         update: Atualizar
         start_live: Começar a Live
@@ -47,6 +48,8 @@ pt-BR:
         create_tour: Criar Tour
       show:
         accomplished_live: Finalizar Live
+      accomplished_list:
+        tours_accomplished: Tours Realizados
     dashboard:
       index:
         painel_partner: Painel do Parceiro
