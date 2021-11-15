@@ -40,6 +40,7 @@ pt-BR:
         tours: Tours
         scheduleds: Agendados
         accomplished: Realizados
+        canceled: Cancelados
         remove: Remover
         update: Atualizar
         start_live: Começar a Live
@@ -50,6 +51,8 @@ pt-BR:
         accomplished_live: Finalizar Live
       accomplished_list:
         tours_accomplished: Tours Realizados
+      closed_list:
+        tours_closed: Tours Cancelados
     dashboard:
       index:
         painel_partner: Painel do Parceiro
