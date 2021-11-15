@@ -5,8 +5,8 @@
 
 ## Main technologies / Gems
 
-<p> [Ruby version - 2.7.1](https://www.ruby-lang.org/en/documentation/installation/) </p>
-<p> [Framework - Rails 6.1.1](https://rubygems.org/gems/rails/versions/4.2.6?locale=pt-BR) </p>
+- [Ruby version - 2.7.1](https://www.ruby-lang.org/en/documentation/installation/)
+- [Framework - Rails 6.1.1](https://rubygems.org/gems/rails/versions/4.2.6?locale=pt-BR)
 
 ## In this project you can use the docker to upload a postgresql database!
 
