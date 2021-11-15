@@ -1,8 +1,13 @@
 <h1> <%= @tour.name %> </h1>
 
-<div> <%= @tour.live_date %> </div>
+<div> <%= @tour.live_date.strftime("%d/%m/%Y - %H:%M") %> </div>
 <div> <%= @tour.status %> </div>
-<div> <%= @tour.video_link %> </div>
+
+<% if @tour.status.eql? "processing" %>
+	<%= get_video_iframe(@tour.video_link, 1190, 669) %>
+  <%= button_to 'Finalizar Live', accomplished_partners_tour_path(@tour), method: :post %>
+<% end %>
+
 <div> <%= @tour.road_map.title %> </div>
 
 <%= link_to "Voltar", partners_dashboard_path %>
