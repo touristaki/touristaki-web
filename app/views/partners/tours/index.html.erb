@@ -3,25 +3,29 @@
 <header>
   <ul>
     <li><%= link_to t('.scheduleds'), scheduled_partners_tours_path %></li>
-    <li><%= link_to "Realizados", "/"  %></li>
+    <li><%= link_to t('.accomplished'), accomplished_list_partners_tours_path %></li>
     <li><%= link_to "Encerrados", "/"  %></li>
   </ul>
 </header>
 
 <ul>
   <% @tours.each do |tour| %>
-    <li><%= link_to tour.name, partners_tour_path(tour) %> <%= button_to t('.remove'), partners_tour_path(tour),method: :delete %> <%= button_to t('.update'), edit_partners_tour_path(tour), method: :get %> 
+    <li><%= link_to tour.name, partners_tour_path(tour) %>
+      <%= button_to t('.remove'), partners_tour_path(tour),method: :delete %>
 
       <% if  tour.status == "pending" %>
+        <%= button_to t('.update'), edit_partners_tour_path(tour), method: :get %>
         <%= button_to t('.start_live'), processing_partners_tour_path(tour), method: :post %>
       <% end %>
 
       <% if tour.status == "pending" || tour.status == "processing"  %>
         <%= button_to t('.close_live'), closed_partners_tour_path(tour), method: :post %>
+      <% else %>
+        (<%= Tour.human_attribute_name("status.#{tour.status}")%>)
       <% end %>
     </li>
     <br>
   <% end %>
 </ul>
 
-<%= link_to "Voltar", partners_dashboard_path %>
+<%= link_to t('buttons.back'), partners_dashboard_path %>
