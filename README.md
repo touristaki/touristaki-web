@@ -53,4 +53,4 @@ rails db:create db:migrate
 rails s
 ```
 
-🚀 To view the system, just access the browser at the address: [localhost:3000](localhost:3000)
+🚀 To view the system, just access the browser at the address: [localhost:3000](http://localhost:3000/)
