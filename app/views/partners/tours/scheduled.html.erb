@@ -2,6 +2,6 @@
 
 <ul>
   <% @tours.each do |tour| %>
-    <li><%= link_to tour.name, partners_tour_path(tour) %> / Data: <%= tour.live_date %> Status: <%= tour.status %></li>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> / Data: <%= @tour.live_date.strftime("%d/%m/%Y - %H:%M") %> / Status: <%= tour.status %></li>
   <% end %>
 </ul>

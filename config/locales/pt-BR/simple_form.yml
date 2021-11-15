@@ -20,6 +20,8 @@ pt-BR:
         new:
           title: 'Título'
           date: 'Data da Live'
-          embed: 'Link da Live'
+          video_link: 'Url da Live'
           description: 'Descreva seu roteiro'
           category_id: 'Categoria'
+          max_spectors: 'Número máximo de espectadores'
+          road_map_id: 'Roteiro'

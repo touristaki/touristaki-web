@@ -38,8 +38,15 @@ pt-BR:
     tours:
       index:
         tours: Tours
+        scheduleds: Agendado
+        remove: Remover
+        update: Atualizar
+        start_live: Começar a Live
+        close_live: Cancelar a Live
       new:
         create_tour: Criar Tour
+      show:
+        accomplished_live: Finalizar Live
     dashboard:
       index:
         painel_partner: Painel do Parceiro
