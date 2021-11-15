@@ -36,31 +36,8 @@ ActiveRecord::Schema.define(version: 2021_11_15_132134) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "street"
-    t.string "city"
-    t.string "state"
-    t.string "country"
-    t.string "zip_code"
-    t.string "number"
-    t.string "complement"
-    t.bigint "customer_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["customer_id"], name: "index_addresses_on_customer_id"
-  end
-
   create_table "categories", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "customers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "language"
-    t.integer "account_type"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -117,6 +94,12 @@ ActiveRecord::Schema.define(version: 2021_11_15_132134) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.integer "max_spectors"
+    t.datetime "processing_at"
+    t.datetime "accomplished_at"
+    t.datetime "closed_at"
+    t.index ["accomplished_at", "status"], name: "index_tours_on_accomplished_at_and_status"
+    t.index ["closed_at", "status"], name: "index_tours_on_closed_at_and_status"
+    t.index ["processing_at", "status"], name: "index_tours_on_processing_at_and_status"
     t.index ["road_map_id"], name: "index_tours_on_road_map_id"
   end
 
@@ -133,7 +116,6 @@ ActiveRecord::Schema.define(version: 2021_11_15_132134) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "addresses", "customers"
   add_foreign_key "partner_informations", "partners"
   add_foreign_key "road_maps", "categories"
   add_foreign_key "road_maps", "partners"
