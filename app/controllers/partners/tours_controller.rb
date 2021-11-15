@@ -53,6 +53,11 @@ class Partners::ToursController < ApplicationController
                  .where(status: "accomplished")
   end
 
+  def closed_list
+    @tours = Tour.where(road_map_id: current_partner.road_maps.ids)
+                 .where(status: "closed")
+  end
+
   def processing
     @tour = Tour.find(params[:id])
     @tour.processing!
@@ -64,6 +69,8 @@ class Partners::ToursController < ApplicationController
   def closed
     @tour = Tour.find(params[:id])
     @tour.closed!
+    
+    @tour.update_attribute(:closed_at, Time.zone.now)
   end
 
   def accomplished
