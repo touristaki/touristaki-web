@@ -3,18 +3,19 @@
 </h1>
 <p align="center">A new way to explore, tourisaki is platform project that aims to connect customers and partners through scheduled lives of the most diverse categories.</p>
 
-# Main technologies / Gems
-[Ruby version - 2.7.1](https://www.ruby-lang.org/en/documentation/installation/)
-[Framework - Rails 6.1.1](https://rubygems.org/gems/rails/versions/4.2.6?locale=pt-BR)  
+## Main technologies / Gems
 
-# In this project you can use the docker to upload a postgresql database!
+<p> [Ruby version - 2.7.1](https://www.ruby-lang.org/en/documentation/installation/) </p>
+<p> [Framework - Rails 6.1.1](https://rubygems.org/gems/rails/versions/4.2.6?locale=pt-BR) </p>
+
+## In this project you can use the docker to upload a postgresql database!
 
 - **🛠 Development mode with postgresql database  **
     - 🐳 [Docker](https://docs.docker.com/engine/installation/)
     - 🐳 [Docker Compose](https://docs.docker.com/compose/) 
     - **💡 Tip:** [Docker- doc](https://docs.docker.com/)
 
-# Clonando o projeto
+## Clonando o projeto
 
 The first step is to clone the project and go to the project folder:
 
@@ -23,9 +24,9 @@ git clone https://github.com/touristaki/touristaki-web.git
 cd touristaki-web
 ```
 
-# Installation
+## Installation
 
-## 🐳 Development Mode with Docker ( **only Postgres** )
+### 🐳 Development Mode with Docker ( **only Postgresql** )
 
 
 After installing the docker and docker-compose, being in the project's root folder, execute this commands and magically the project will run:
