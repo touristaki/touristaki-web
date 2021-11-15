@@ -13,6 +13,7 @@ Rails.application.routes.draw do
 
     resources :tours do
       get 'scheduled', on: :collection
+      get 'accomplished_list', on: :collection
       post 'processing', on: :member
       post 'closed', on: :member
       post 'accomplished', on: :member
