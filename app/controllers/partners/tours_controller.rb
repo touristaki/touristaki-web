@@ -48,6 +48,22 @@ class Partners::ToursController < ApplicationController
                  .where(status: "processing")
   end
 
+  def processing
+    @tour = Tour.find(params[:id])
+    @tour.processing!
+    redirect_to partners_tour_path(@tour)
+  end
+
+  def closed
+    @tour = Tour.find(params[:id])
+    @tour.closed!
+  end
+
+  def accomplished
+    @tour = Tour.find(params[:id])
+    @tour.accomplished!
+  end
+
   private
 
   def load_params
