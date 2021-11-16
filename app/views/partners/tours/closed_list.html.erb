@@ -1,0 +1,7 @@
+<h1> <%= t('.tours_closed') %> </h1>
+
+<ul>
+  <% @tours.each do |tour| %>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> / Data de Cancelamento: <%= tour.closed_at&.strftime("%d/%m/%Y - %H:%M") %> / Status: <%= Tour.human_attribute_name("status.#{tour.status}") %></li>
+  <% end %>
+</ul>

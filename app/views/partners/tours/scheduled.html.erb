@@ -1,0 +1,7 @@
+<h1> Tours Agendados </h1>
+
+<ul>
+  <% @tours.each do |tour| %>
+    <li><%= link_to tour.name, partners_tour_path(tour) %> / Data: <%= @tour.live_date.strftime("%d/%m/%Y - %H:%M") %> / Status: <%= tour.status %></li>
+  <% end %>
+</ul>

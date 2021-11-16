@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_09_001316) do
+ActiveRecord::Schema.define(version: 2021_11_15_132134) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -93,6 +93,13 @@ ActiveRecord::Schema.define(version: 2021_11_09_001316) do
     t.bigint "road_map_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "max_spectors"
+    t.datetime "processing_at"
+    t.datetime "accomplished_at"
+    t.datetime "closed_at"
+    t.index ["accomplished_at", "status"], name: "index_tours_on_accomplished_at_and_status"
+    t.index ["closed_at", "status"], name: "index_tours_on_closed_at_and_status"
+    t.index ["processing_at", "status"], name: "index_tours_on_processing_at_and_status"
     t.index ["road_map_id"], name: "index_tours_on_road_map_id"
   end
 

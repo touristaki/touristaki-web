@@ -1,0 +1,14 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      partner:
+        one: Tour
+        other: Tours
+    attributes:
+      tour/status:
+        accomplished: Realizado
+        closed: Cancelado
+        pending: Em Espera
+        processing: Acontecendo
+
