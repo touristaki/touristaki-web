@@ -1,0 +1,24 @@
+<h1><%= t('.create_tour') %></h1>
+
+<%= simple_form_for [:partners, @tour] do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :name,
+                autofocus: true,
+                input_html: { autocomplete: "title" }%>
+
+    <%= f.input :live_date, as: :date %>
+    <%= f.input :video_link %>
+
+    <%= f.input :max_spectors, as: :numeric %>
+    
+    <%= f.input :road_map_id, collection: @road_maps, prompt: "Selecionar o roteiro" %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit, "Criar" %>
+  </div>
+<% end %>
+
+<%= link_to t('buttons.back'), partners_dashboard_path %>

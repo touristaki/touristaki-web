@@ -1,0 +1,44 @@
+<header class="header_auth text-center">
+  <div class="row bg-danger line-top">
+  </div>
+  <div class="row mt-3">
+    <h3 class="col-12 description-page mt-1">Criar sua conta</h3>
+  </div>
+</header>
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-4">
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
+
+        <%= f.input :email,
+                    required: true,
+                    input_html: { autocomplete: "email", class: "mt-2" }%>
+
+        <%= f.input :name,
+                    required: true,
+                    input_html: { class: "mt-2" } %>
+
+        <%= f.input :password,
+                    required: true,
+                    hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                    input_html: { autocomplete: "new-password" } %>
+
+        <%= f.input :password_confirmation,
+                    required: true,
+                    input_html: { autocomplete: "new-password" } %>
+
+        <div class="form-actions mt-5">
+          <%= f.button :submit, "Cadastrar", class: "text-uppercase btn-lg col-12 btn-outline-danger" %>
+        </div>
+
+        <div class="form-row">
+          <div class="text-center mt-2">
+            <p class="fs-6 lh-sm"> Já tem uma conta?<%= link_to " Entre.", new_partner_session_path, class: "text-uppercase submit_auth" %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

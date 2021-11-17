@@ -5,11 +5,17 @@ ruby '2.7.1'
 gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.1'
-gem 'sass-rails', '>= 6'
-gem 'jbuilder', '~> 2.7'
-gem 'devise'
-gem 'bootsnap', '>= 1.4.2', require: false
 
+gem 'sass-rails', '>= 6'
+gem 'bootstrap', '~> 5.1.3'
+gem 'jquery-rails'
+
+gem 'jbuilder', '~> 2.7'
+gem 'bootsnap', '>= 1.4.2', require: false
+gem "image_processing", ">= 1.2"
+
+
+gem 'devise'
 gem 'simple_form'
 gem "administrate"
 

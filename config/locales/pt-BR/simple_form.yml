@@ -1,0 +1,27 @@
+pt-BR:
+  simple_form:
+    "yes": 'Sim'
+    "no": 'Não'
+    required:
+      text: 'obrigatório'
+      mark: '*'
+      # You can uncomment the line below if you need to overwrite the whole required html.
+      # When using html, text and mark won't be used.
+      # html: '<abbr title="required">*</abbr>'
+    error_notification:
+      default_message: "Alguns erros foram encontrados, por favor verifique:"
+    labels:
+      partner:
+        new:
+          name: 'Nome'
+          password: 'Senha'
+          password_confirmation: 'Confirmação de Senha'
+      tour:
+        new:
+          title: 'Título'
+          date: 'Data da Live'
+          video_link: 'Url da Live'
+          description: 'Descreva seu roteiro'
+          category_id: 'Categoria'
+          max_spectors: 'Número máximo de espectadores'
+          road_map_id: 'Roteiro'
