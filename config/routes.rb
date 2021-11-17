@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :partners
 
-  root to: "home#index"
+  root to: 'home#index'
 
   namespace :partners do
     root to: 'home#index'
@@ -24,4 +24,8 @@ Rails.application.routes.draw do
   end
 
   devise_for :users
+
+  namespace :admin do
+    resources :users
+  end
 end

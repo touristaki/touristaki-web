@@ -17,12 +17,14 @@ gem "image_processing", ">= 1.2"
 
 gem 'devise'
 gem 'simple_form'
+gem "administrate"
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
 group :development do
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
   gem 'web-console', '>= 3.3.0'
   gem 'listen', '~> 3.2'
   gem 'pry-byebug'
