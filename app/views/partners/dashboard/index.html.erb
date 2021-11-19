@@ -1,5 +1,3 @@
-<h1><%= t('.painel_partner') %></h1>
-
 <% if partner_signed_in? %>
 	<div><%= button_to t('.create_road_map'), new_partners_road_map_path, :method => :get %></div>
 	<div><%= button_to t('.my_road_maps'), partners_road_maps_path, :method => :get %></div>
@@ -11,3 +9,44 @@
 	<div><%= button_to t('.sign_in'),  new_partner_session_path, :method => :get %></div>
 	<div><%= button_to t('.sign_up'),  new_partner_registration_path, :method => :get %></div>
 <% end %>
+
+
+<input type="checkbox" id="check">
+<label far="check">
+  <%= fa_icon "bars", id: "btn" %>
+  <%= fa_icon "times", id: "cancel" %>
+</label>
+
+<div class="sidebar">
+	<header>
+		<%= t('.painel_partner') %>
+	</header>
+  
+	<a href="#" class="active">
+    <%= fa_icon "home", text: "Painel" %>
+	</a>
+
+	<a href="#">
+    <%= fa_icon "globe", text: t('.create_road_map') %>
+	</a>
+
+	<a href="#">
+		<%= fa_icon "map", text: t('.my_road_maps') %>
+	</a>
+
+	<a href="#">
+		<%= fa_icon "calendar", text: t('.create_tour') %>
+	</a>
+
+	<a href="#">
+		<%= fa_icon "play-circle", text: t('.my_tours') %>
+	</a>
+
+	<a href="#">
+    <%= fa_icon "user", text: t('.profile') %>
+	</a>
+
+	<a href="#">
+    <%= fa_icon "sign-out", text: t('.sign_out') %>
+	</a>
+</div>
