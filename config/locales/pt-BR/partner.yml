@@ -53,19 +53,6 @@ pt-BR:
         tours_accomplished: Tours Realizados
       closed_list:
         tours_closed: Tours Cancelados
-    dashboard:
-      index:
-        painel_partner: Painel do Parceiro
-        sign_out: Sair
-        profile: Minha Conta
-        create_road_map: Criar Roteiro
-        my_road_maps: Meus Roteiros
-        create_tour: Criar Tour
-        my_tours: Meus Tours
-        favorites: Favoritos
-        sign_in: Entrar
-        sign_up: Cadastrar Parceiro
-        sign_out: Sair
     confirmations:
       new:
         resend_instructions: Reenviar instruções de confirmação

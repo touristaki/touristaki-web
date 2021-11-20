@@ -223,3 +223,15 @@ pt-BR:
     pm: ''
   buttons:
     back: 'Voltar'
+  sidebar:
+    painel_partner: Painel do Parceiro
+    sign_out: Sair
+    profile: Minha Conta
+    create_road_map: Criar Roteiro
+    my_road_maps: Meus Roteiros
+    create_tour: Criar Tour
+    my_tours: Meus Tours
+    favorites: Favoritos
+    sign_in: Entrar
+    sign_up: Cadastrar Parceiro
+    sign_out: Sair

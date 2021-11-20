@@ -2,6 +2,8 @@ class Partners::RoadMapsController < ApplicationController
   before_action :authenticate_partner!
   before_action :load_params, only: [:create]
 
+  layout 'partners'
+
   def index
     @road_maps = current_partner.road_maps
   end

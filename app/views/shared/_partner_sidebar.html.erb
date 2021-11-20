@@ -1,0 +1,36 @@
+<div id="main">
+  <button class="openbtn" onclick="openNav()">&#9776; Menu</button>
+</div>
+
+<div id="mySidebar" class="sidebar">
+	<%= fa_icon "times", id: "cancel", href: "javascript:void(0)", class:"closebtn", onclick:"closeNav()" %>
+  
+	<a href="#" class="active">
+	<%= link_to partners_dashboard_path, :method => :get do %>
+    <%= fa_icon "home", text: "Painel" %>
+	<% end %>
+
+	<%= link_to new_partners_road_map_path, :method => :get do %>
+    <%= fa_icon "globe", text: t('sidebar.create_road_map') %>
+	<% end %>
+
+	<%= link_to partners_road_maps_path, :method => :get do %>
+		<%= fa_icon "map", text: t('sidebar.my_road_maps') %>
+	<% end %>
+
+	<%= link_to new_partners_tour_path, :method => :get do %>
+		<%= fa_icon "calendar", text: t('sidebar.create_tour') %>
+	<% end %>
+
+	<%= link_to partners_tours_path, :method => :get do %>
+		<%= fa_icon "play-circle", text: t('sidebar.my_tours') %>
+	<% end %>
+
+	<%= link_to partners_partner_informations_path, :method => :get do %>
+    <%= fa_icon "user", text: t('sidebar.profile') %>
+	<% end %>
+
+  <%= link_to destroy_partner_session_path, :method => :get do %>
+    <%= fa_icon "sign-out", text: t('sidebar.sign_out') %>
+  <% end %>
+</div>
