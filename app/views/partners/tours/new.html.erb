@@ -1,24 +1,36 @@
-<h1><%= t('.create_tour') %></h1>
+<div class="container-fluid show_card">
+  <div class="cards">
+    <div class="card">
+      <div class="contents ">
+        <div class="container-sm">
+          <h1 class="text-center"><%= t('.create_tour') %></h1>
+          
+          <%= simple_form_for [:partners, @tour]  do |f| %>
+            <%= f.error_notification %>
 
-<%= simple_form_for [:partners, @tour] do |f| %>
-  <%= f.error_notification %>
+            <%= f.input :name,
+                        autofocus: true,
+                        input_html: { autocomplete: "title" }%>
 
-  <div class="form-inputs">
-    <%= f.input :name,
-                autofocus: true,
-                input_html: { autocomplete: "title" }%>
+            <%= f.input :description,  as: :rich_text_area, input_html: { class: "mb-3 pb-5" } %>
 
-    <%= f.input :live_date, as: :date %>
-    <%= f.input :video_link %>
+            <%= f.input :live_date, as: :date %>
+            <%= f.input :video_link %>
 
-    <%= f.input :max_spectors, as: :numeric %>
-    
-    <%= f.input :road_map_id, collection: @road_maps, prompt: "Selecionar o roteiro" %>
+            <%= f.input :max_spectors, as: :numeric %>
+            
+            <%= f.input :road_map_id, collection: @road_maps, prompt: "Selecionar o roteiro" %>
+
+            <div class="mt-5 pulse">
+              <%= f.button :submit, t('.create_tour'), class: "slide text-uppercase btn-lg col-12" %>
+            </div>
+
+            <div class="form-actions mt-5 float-end">
+              <%= link_to t('buttons.back'), partners_dashboard_path, class:"btn btn-primary" %>
+            </div>  
+          <% end %>
+        </div>
+      </div>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Criar" %>
-  </div>
-<% end %>
-
-<%= link_to t('buttons.back'), partners_dashboard_path %>
+</div>
