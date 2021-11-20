@@ -16,12 +16,19 @@ pt-BR:
           name: 'Nome'
           password: 'Senha'
           password_confirmation: 'Confirmação de Senha'
+      road_map:
+        new:
+          title: 'Título'
+          description: 'Descreva seu Roteiro'
+          category_id: 'Categoria'
+          apresentation_video: 'Video de Apresentação'
+          presentation_photos: 'Imagens de seu roteiro'
       tour:
         new:
           title: 'Título'
           date: 'Data da Live'
           video_link: 'Url da Live'
-          description: 'Descreva seu roteiro'
+          description: 'Descreva'
           category_id: 'Categoria'
           max_spectors: 'Número máximo de espectadores'
           road_map_id: 'Roteiro'

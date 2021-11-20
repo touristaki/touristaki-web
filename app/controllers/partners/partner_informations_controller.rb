@@ -1,6 +1,8 @@
 class Partners::PartnerInformationsController < ApplicationController
   before_action :load_params, only: %i[update]
 
+  layout 'partners'
+
   def index
     if current_partner.partner_information.nil?
       @information = current_partner.create_partner_information({})

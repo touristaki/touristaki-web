@@ -2,6 +2,8 @@ class Partners::RoadMapsController < ApplicationController
   before_action :authenticate_partner!
   before_action :load_params, only: [:create]
 
+  layout 'partners'
+
   def index
     @road_maps = current_partner.road_maps
   end
@@ -25,6 +27,6 @@ class Partners::RoadMapsController < ApplicationController
   private
 
   def load_params
-    params.require(:road_map).permit(:title, :category_id)
+    params.require(:road_map).permit(:title, { presentation_photos:[] }, :category_id, :description, :presentation_video)
   end
 end

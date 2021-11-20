@@ -2,6 +2,8 @@ class Partners::ToursController < ApplicationController
   before_action :authenticate_partner!
   before_action :load_params, only: [:create]
 
+  layout 'partners'
+
   def index
     @tours = Tour.where(road_map_id: current_partner.road_maps.ids )
   end
