@@ -11,7 +11,7 @@
                         autofocus: true,
                         input_html: { autocomplete: "title" }%>
 
-            <%= f.input :description, input_html: { class: "mb-5 pt-5 pb-5" } %>
+            <%= f.input :description,  as: :rich_text_area, input_html: { class: "mb-5 pb-5" } %>
 
             <%= f.label :presentation_photos %>
             <%= f.input :presentation_photos, as: :file, label: false, :input_html => { :multiple => true } %>

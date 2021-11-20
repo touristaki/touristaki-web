@@ -1,6 +1,8 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "./sidebar";
+@import "node_modules/trix/dist/trix.css";
+@import "./actiontext.scss";
 
 /* Global colors */
 :root {
