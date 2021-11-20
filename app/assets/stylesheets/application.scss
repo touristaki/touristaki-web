@@ -3,33 +3,7 @@
 @import "./sidebar";
 @import "node_modules/trix/dist/trix.css";
 @import "./actiontext.scss";
-
-/* Global colors */
-:root {
-  --color-primary: #ff7733;
-  --color-primary-light: #FFA047;
-  --color-primary-translucent: rgba(102,179, 186, 0.3);
-  --color-danger-translucent: rgba(227,23,10, 0.3);
-  --gray-inputs-legends: #666;
-  --gray-backgroud-color-lines: #E5E5E5;
-  --text-color: #283D3B;
-  --color-purple-dark: #260C1A;
-  --color-filds-input: rgba(102, 179,186, 0.6);
-}
-
-
-.simple_form label {
-  margin-top: 1rem;
-  margin-bottom: 0.4rem;
-}
-
-.simple_form input {
-  margin-bottom: 0.5rem;
-}
-
-.line-top {
-	height: 0.5rem;
-}
+@import "./global";
 
 .pulse {
   .btn {
