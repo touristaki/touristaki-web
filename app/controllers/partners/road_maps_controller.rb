@@ -27,6 +27,6 @@ class Partners::RoadMapsController < ApplicationController
   private
 
   def load_params
-    params.require(:road_map).permit(:title, :category_id)
+    params.require(:road_map).permit(:title, { presentation_photos:[] }, :category_id, :description, :presentation_video)
   end
 end

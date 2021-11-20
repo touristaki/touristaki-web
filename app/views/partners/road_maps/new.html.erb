@@ -11,11 +11,15 @@
                         autofocus: true,
                         input_html: { autocomplete: "title" }%>
 
-            <%= f.file_field :apresentation %>
-            <%= f.file_field :video_apresentation %>
-            <%= f.label :description %>
-            <%= f.text_field :description  %>
-            <%= f.input :category_id, collection: Category.all %>
+            <%= f.input :description, input_html: { class: "mb-5 pt-5 pb-5" } %>
+
+            <%= f.label :presentation_photos %>
+            <%= f.input :presentation_photos, as: :file, label: false, :input_html => { :multiple => true } %>
+
+            <%= f.label :presentation_video %>
+            <%= f.input :presentation_video, as: :file, label: false %>
+
+            <%= f.input :category_id, :collection => Category.all, :value_method => :id, :include_blank => false %>
 
             <div class="mt-5 pulse">
               <%= f.button :submit, t('.subscript_road_map'), class: "slide text-uppercase btn-lg col-12" %>
