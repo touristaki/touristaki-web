@@ -35,6 +35,7 @@ pt-BR:
         road_maps: Roteiros
       new:
         create_road_map: Criar Roteiro
+        subscript_road_map: Cadastrar Roteiro
     tours:
       index:
         tours: Tours
