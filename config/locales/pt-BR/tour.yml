@@ -14,3 +14,4 @@ pt-BR:
       tour:
         name: Nome
         live_date: Dia da live
+        status: Situação
