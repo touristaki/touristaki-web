@@ -33,9 +33,13 @@ pt-BR:
     road_maps:
       index:
         road_maps: Roteiros
+        remove: Remover
+        update: Atualizar
       new:
         create_road_map: Criar Roteiro
         subscript_road_map: Cadastrar Roteiro
+      edit:
+        update_road_map: Atualizar Roteiro
     tours:
       index:
         tours: Tours

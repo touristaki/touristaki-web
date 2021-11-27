@@ -7,5 +7,5 @@ class RoadMap < ApplicationRecord
 
   has_rich_text :description
 
-  has_many :tours
+  has_many :tours, :dependent => :destroy
 end

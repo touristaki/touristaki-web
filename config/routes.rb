@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     get 'dashboard#index', to: 'dashboard#index', as: 'dashboard'
 
     resources :partner_informations, only: [:index, :edit, :update]
-    resources :road_maps, only: [:index, :new, :create, :show]
+    resources :road_maps
 
     resources :tours do
       get 'scheduled', on: :collection

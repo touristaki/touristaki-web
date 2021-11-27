@@ -24,6 +24,25 @@ class Partners::RoadMapsController < ApplicationController
     @road_map = RoadMap.find(params[:id])
   end
 
+  def destroy
+    @road_map = RoadMap.find(params[:id])
+    @road_map.destroy
+
+    redirect_to partners_road_map_path
+  end
+
+  def edit
+    @road_map = RoadMap.find(params[:id])
+  end
+
+  def update
+    @road_map = RoadMap.find(params[:id])
+
+    if @road_map.update(*load_params)
+      redirect_to partners_road_map_path(@road_map)
+    end
+  end
+
   private
 
   def load_params

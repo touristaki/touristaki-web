@@ -19,6 +19,14 @@
           <td> <%= road_map.category.name %> </td>
           <td> <%= road_map.created_at.strftime("%d/%m/%Y") %> </td>
           <td> <%= road_map.updated_at.strftime("%d/%m/%Y") %> </td>
+
+          <td>
+            <%= button_to t('.remove'), partners_road_map_path(road_map),method: :delete %> 
+          </td>
+          
+          <td> 
+            <%= button_to t('.update'), edit_partners_road_map_path(road_map), method: :get %>
+          </td>
         </tr>
       <% end %>
     </tbody>
