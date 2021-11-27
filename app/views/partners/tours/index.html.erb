@@ -1,5 +1,3 @@
-<h1><%= t('.tours')%></h1>
-
 <header>
   <ul>
     <li><%= link_to t('.scheduleds'), scheduled_partners_tours_path %></li>
@@ -8,24 +6,44 @@
   </ul>
 </header>
 
-<ul>
-  <% @tours.each do |tour| %>
-    <li><%= link_to tour.name, partners_tour_path(tour) %>
-      <%= button_to t('.remove'), partners_tour_path(tour),method: :delete %>
+<div class='container'>
+  <h1><%= t('.tours')%></h1>
 
-      <% if  tour.status == "pending" %>
-        <%= button_to t('.update'), edit_partners_tour_path(tour), method: :get %>
-        <%= button_to t('.start_live'), processing_partners_tour_path(tour), method: :post %>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><%= Tour.human_attribute_name('name') %></th>
+        <th scope="col"><%= RoadMap.model_name.human %></th>
+        <th scope="col"><%= Tour.human_attribute_name('status') %></th>
+        <th scope="col"><%= Tour.human_attribute_name('live_date') %></th>
+        <th scope='col'>Remover</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @tours.each do |tour| %>
+        <tr>
+          <td></td>
+          <td> <%= link_to tour.name, partners_tour_path(tour) %> </td>
+          <td> <%= link_to tour.road_map.title, partners_road_map_path(tour.road_map) %> </td>
+          <td> <%= Tour.human_attribute_name("status.#{tour.status}")%> </td>
+          <td> <%= tour.live_date.strftime("%d/%m/%Y - %H:%M") %> </td>
+          <td> <%= button_to t('.remove'), partners_tour_path(tour),method: :delete %> </td>
+
+          <% if  tour.status == "pending" %>
+            <td> <%= button_to t('.update'), edit_partners_tour_path(tour), method: :get %></td>
+            <td> <%= button_to t('.start_live'), processing_partners_tour_path(tour), method: :post %> </td>
+          <% end %>
+
+          <% if tour.status == "pending" || tour.status == "processing"  %>
+            <td> <%= button_to t('.close_live'), closed_partners_tour_path(tour), method: :post %> </td>
+          <% end %>
+        </tr>
       <% end %>
+    </tbody>
+  </table>
 
-      <% if tour.status == "pending" || tour.status == "processing"  %>
-        <%= button_to t('.close_live'), closed_partners_tour_path(tour), method: :post %>
-      <% else %>
-        (<%= Tour.human_attribute_name("status.#{tour.status}")%>)
-      <% end %>
-    </li>
-    <br>
-  <% end %>
-</ul>
-
-<%= link_to t('buttons.back'), partners_dashboard_path %>
+  <div class="form-actions mt-5 float-end">
+    <%= link_to t('buttons.back'), partners_dashboard_path, class:"btn btn-primary" %>
+  </div>
+</div>
