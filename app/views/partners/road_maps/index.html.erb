@@ -21,11 +21,15 @@
           <td> <%= road_map.updated_at.strftime("%d/%m/%Y") %> </td>
 
           <td>
-            <%= button_to t('.remove'), partners_road_map_path(road_map),method: :delete %> 
+            <%= link_to [:partners, road_map], data: { method: :delete, confirm: 'Você tem certeza?' } do %>
+              <%= image_tag('icon_trash.svg')%>
+            <% end %>
           </td>
           
-          <td> 
-            <%= button_to t('.update'), edit_partners_road_map_path(road_map), method: :get %>
+          <td>
+            <%= link_to edit_partners_road_map_path(road_map) do %>
+              <%= image_tag 'icon_edit.svg' %>
+            <% end %>
           </td>
         </tr>
       <% end %>

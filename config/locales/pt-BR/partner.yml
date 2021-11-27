@@ -54,6 +54,14 @@ pt-BR:
         create_tour: Criar Tour
       show:
         accomplished_live: Finalizar Live
+        tours: Tours
+        scheduleds: Agendados
+        accomplished: Realizados
+        canceled: Cancelados
+        remove: Remover
+        update: Atualizar
+        start_live: Começar a Live
+        close_live: Cancelar a Live
       accomplished_list:
         tours_accomplished: Tours Realizados
       closed_list:

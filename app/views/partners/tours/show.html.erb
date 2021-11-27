@@ -4,10 +4,32 @@
 <div> Status: <%= Tour.human_attribute_name("status.#{@tour.status.to_s}") %> </div>
 <div> Categoria: <%= @tour.road_map.title %> </div>
 
-
 <% if @tour.status.eql? "processing" %>
 	<%= get_video_iframe(@tour.video_link, 1190, 669) %>
   <%= button_to t('.accomplished_live'), accomplished_partners_tour_path(@tour), method: :post %>
 <% end %>
 
-<%= link_to t('buttons.back'), partners_dashboard_path %>
+<% if  @tour.status == "pending" %>
+  <td>
+    <%= link_to t('.start_live'), 
+        processing_partners_tour_path(@tour),
+        class: 'btn btn-success',
+        method: :post 
+    %>
+  </td>
+<% end %>
+
+<% if @tour.status == "pending" || @tour.status == "processing"  %>
+  <td> 
+    <%= link_to t('.close_live'),
+        closed_partners_tour_path(@tour),
+        class: 'btn btn-danger',
+        data: { confirm: 'Você tem certeza?' },
+        method: :post
+    %>
+  </td>
+<% end %>
+
+<div class="form-actions mt-5 float-end">
+  <%= link_to t('buttons.back'), partners_dashboard_path, class:"btn btn-primary" %>
+</div>
