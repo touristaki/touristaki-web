@@ -1,0 +1,12 @@
+---
+pt-BR:
+  activerecord:
+    models:
+      road_map:
+        one: Roteiro
+        other: Roteiros
+    attributes:
+      road_map:
+        title: Título
+        created_at: Criado em
+        updated_at: Atualizado em

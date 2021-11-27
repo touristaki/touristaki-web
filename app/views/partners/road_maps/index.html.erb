@@ -1,9 +1,30 @@
-<h1><%= t('.road_maps')%></h1>
+<div class='container'>
+  <h1><%= t('.road_maps')%></h1>
 
-<ul>
-  <% @road_maps.each do |road_map| %>
-    <li><%= link_to road_map.title, partners_road_map_path(road_map) %> </li>
-  <% end %>
-</ul>
+  <table class="table table-striped">
+    <thead class="thead-light">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col"><%= RoadMap.human_attribute_name('title') %></th>
+        <th scope="col"><%= Category.model_name.human %></th>
+        <th scope="col"><%= RoadMap.human_attribute_name('created_at') %></th>
+        <th scope="col"><%= RoadMap.human_attribute_name('updated_at') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @road_maps.each do |road_map| %>
+        <tr>
+          <td></td>
+          <td> <%= link_to road_map.title, partners_road_map_path(road_map) %> </td>
+          <td> <%= road_map.category.name %> </td>
+          <td> <%= road_map.created_at.strftime("%d/%m/%Y") %> </td>
+          <td> <%= road_map.updated_at.strftime("%d/%m/%Y") %> </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 
-<%= link_to "Voltar", partners_dashboard_path %>
+  <div class="form-actions mt-5 float-end">
+    <%= link_to t('buttons.back'), partners_dashboard_path, class:"btn btn-primary" %>
+  </div>
+</div>

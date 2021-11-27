@@ -2,7 +2,7 @@
 pt-BR:
   activerecord:
     models:
-      partner:
+      tour:
         one: Tour
         other: Tours
     attributes:
@@ -11,4 +11,6 @@ pt-BR:
         closed: Cancelado
         pending: Em Espera
         processing: Acontecendo
-
+      tour:
+        name: Nome
+        live_date: Dia da live
